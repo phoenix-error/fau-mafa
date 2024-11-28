@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Endloses Scrollen",
+    "shortDescription": "Endloses Scrollen nutzt psychologische Tricks, um uns in den Bann zu ziehen und unsere Zeit zu stehlen.",
+    "detailedDescription": "Das endlose Scrollen ist ein weit verbreitetes Feature in der digitalen Welt, das unsere Aufmerksamkeit fesselt und uns in einen Sog der Inhalte zieht. Es nutzt den Zeigarnik-Effekt, der uns dazu treibt, begonnene Aufgaben abzuschließen. Da es keinen natürlichen Endpunkt gibt, bleibt die Motivation bestehen, weiter zu scrollen. Plattformen wie Instagram und TikTok haben dieses Prinzip perfektioniert, indem ihre Feeds kontinuierlich neue Inhalte nachladen. Auch News-Websites verwenden ähnliche Mechanismen. Diese Technik führt oft dazu, dass Nutzer mehr Zeit als beabsichtigt auf diesen Plattformen verbringen, was zu einem Gefühl der verlorenen Zeit führen kann.",
+    "solutions": [
+      "Browser-Plugins nutzen: Verwende Erweiterungen wie 'News Feed Eradicator', um endlose Feeds zu blockieren.",
+      "Bildschirmzeit-Benachrichtigungen aktivieren: Diese warnen dich nach einer bestimmten Nutzungsdauer.",
+      "To-Do-First-Liste erstellen: Plane deine Zeit bewusst, bevor du dein Handy benutzt."
+    ],
+    "image": "endless_scrolling.png"
+  },
+  {
+    "title": "Gezielte Werbung",
+    "shortDescription": "Gezielte Werbung verfolgt dich online und nutzt persönliche Daten für maßgeschneiderte Anzeigen.",
+    "detailedDescription": "Gezielte Werbung ist ein mächtiges Werkzeug im digitalen Marketing, das Daten aus Suchanfragen, Likes und sogar Gesprächen nutzt, um Werbung präzise auf Nutzer zuzuschneiden. Dies kann ein Gefühl des ständigen Beobachtetwerdens hervorrufen. Beispielsweise erscheinen nach einer Suche nach einem Urlaubsort plötzlich überall Hotelanzeigen. Um sich vor den invasiven Aspekten gezielter Werbung zu schützen, können Nutzer verschiedene Maßnahmen ergreifen.",
+    "solutions": [
+      "Werbeanpassungseinstellungen überprüfen: Auf Plattformen wie Google und Facebook regelmäßig anpassen.",
+      "Such- und Browserverlauf löschen: Tracking minimieren.",
+      "Private Suchmaschinen nutzen: DuckDuckGo verwenden und Tracking-Cookies blockieren."
+    ],
+    "image": "targeted_ads.png"
+  },
+  {
+    "title": "FOMO (Fear of Missing Out)",
+    "shortDescription": "FOMO wird durch soziale Medien verstärkt und kann zu Angst und Unzufriedenheit führen.",
+    "detailedDescription": "FOMO ist die Angst, etwas zu verpassen, und wird durch Social-Media-Posts verstärkt, die oft unrealistische Darstellungen von Erfolg und Glück zeigen. Diese ständige Konfrontation mit scheinbar perfekten Momenten anderer kann zu sozialem Druck und Angstzuständen führen. Ein typisches Beispiel ist der Anblick von Fotos von einem Event, zu dem man nicht eingeladen wurde. Um den negativen Auswirkungen von FOMO entgegenzuwirken, empfehlen Experten verschiedene Strategien.",
+    "solutions": [
+      "Social-Media-Pausen einlegen: Schützt die mentale Gesundheit.",
+      "Reale und positive Inhalte folgen: Accounts auswählen, die authentische Inhalte teilen.",
+      "Dankbarkeit üben: Tägliche Reflexion über positive Aspekte im Leben."
+    ],
+    "image": "fomo.jpg"
+  },
+  {
+    "title": "Dopamin-Trigger",
+    "shortDescription": "Social Media steigert bewusst das Dopamin-Level durch Likes und Benachrichtigungen.",
+    "detailedDescription": "Soziale Medien sind darauf ausgelegt, unser Dopamin-Level zu beeinflussen. Funktionen wie Likes und Kommentare lösen kleine Dopamin-Ausschüttungen aus, ähnlich wie Glücksspielautomaten. Instagram zeigt Likes verzögert an, um Spannung zu erzeugen, während TikTok Nutzer mit viralen Momenten belohnt. Diese Mechanismen können stark süchtig machen.",
+    "solutions": [
+      "Benachrichtigungen ausschalten: Für Social-Media-Apps komplett deaktivieren.",
+      "Nutzung auf feste Zeiten beschränken: Z. B. 15 Minuten nach dem Mittagessen.",
+      "Reflexion fördern: Nach jedem Login fragen, warum die App geöffnet wurde."
+    ],
+    "image": "dopamine_trigger.jpg"
+  },
+  {
+    "title": "Algorithmus-Bias",
+    "shortDescription": "Algorithmen verstärken bestehende Ansichten und schränken die Meinungsvielfalt ein.",
+    "detailedDescription": "Algorithmen bestimmen zunehmend unsere digitalen Erfahrungen und neigen dazu, bestehende Ansichten zu verstärken. Sie bevorzugen Inhalte, die mit unseren bisherigen Interaktionen übereinstimmen, was zu Filterblasen führen kann. Auf Facebook werden Nutzern vorwiegend Beiträge angezeigt, die mit ihren politischen Ansichten übereinstimmen; YouTube schlägt oft extremere Versionen der zuletzt angesehenen Videos vor.",
+    "solutions": [
+      "Plattformen wie Reddit nutzen: Verschiedene Communities entdecken.",
+      "Aktiv nach widersprechenden Inhalten suchen: Perspektiven erweitern.",
+      "Plattformwechsel durchführen: Um eine größere Vielfalt an Informationen zu erhalten."
+    ],
+    "image": "algorithm_bias.jpg"
+  }
+]

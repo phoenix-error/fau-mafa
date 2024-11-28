@@ -1,0 +1,187 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Endloses Scrollen",
+      "question": "Welche der folgenden Aussagen verbindest du mit 'endlosem Scrollen'?",
+      "options": [
+        "Es hilft dir, produktiv zu bleiben.",
+        "Man verbraucht meist mehr Zeit als geplant.",
+        "Es hilft dabei, eine nachhaltige Pause einzulegen.",
+        "Deine volle Aufmerksamkeit wird von dem gezeigten Inhalt vollkommen beansprucht."
+      ],
+      "correctOptionIndexes": [1, 3],
+      "explanation": "Endloses Scrollen verlängert die Verweildauer auf den jeweiligen Plattformen und zieht die volle Aufmerksamkeit des Nutzers auf sich. Verschiedene Techniken werden gezielt angewendet, um den Nutzer so lange wie möglich auf den Seiten zu behalten."
+    },
+    {
+      "id": 2,
+      "topic": "Endloses Scrollen",
+      "question": "Welche Maßnahmen können helfen, das endlose Scrollen zu kontrollieren?",
+      "options": [
+        "Das Setzen von Zeitlimits.",
+        "Verschiedene Apps dieser Art nutzen.",
+        "Es gibt keine Maßnahmen, die mir helfen können.",
+        "Genaue Uhrzeiten festlegen."
+      ],
+      "correctOptionIndexes": [0, 3],
+      "explanation": "Es gibt viele verschiedene Apps und Plugins, die dabei helfen können, das endlose Scrollen zu minimieren. Durch das Setzen eines Zeitlimits oder Benachrichtigungen zu einer bestimmten Uhrzeit wird man regelmäßig daran erinnert, diese Plattformen zu schließen und kann seine Zeit wieder nützlichen Sachen widmen."
+    },
+    {
+      "id": 3,
+      "topic": "Endloses Scrollen",
+      "question": "Welchen Vorteil haben die Plattformen durch das 'endlose Scrollen'?",
+      "options": [
+        "Die Nutzer verbringen dort mehr Zeit.",
+        "Inhalte können schneller geladen werden.",
+        "Sie können ihren Algorithmus verbessern.",
+        "Der Nutzer kann eine Pause einlegen."
+      ],
+      "correctOptionIndexes": [0, 2],
+      "explanation": "Das 'endlose Scrollen' führt dazu, dass tausende von Nutzern mehrere Stunden auf diesen Plattformen verbringen. Dadurch kommt es zu mehr Werbeeinnahmen, die Nutzerdaten der User können detailliert gesammelt werden, und die Plattform gewinnt an Beliebtheit. Außerdem können durch das regelmäßige Nutzen Algorithmen verfeinert werden. Das alles bildet einen Kreislauf und steigert den Erfolg einer Plattform."
+    },
+    {
+      "id": 4,
+      "topic": "Gezielte Werbung",
+      "question": "Welche Daten werden häufig für gezielte Werbung verwendet?",
+      "options": [
+        "Dein Online-Verhalten.",
+        "Deine persönlichen Gespräche.",
+        "Deine private Fotobibliothek.",
+        "Deine Interessen."
+      ],
+      "correctOptionIndexes": [0, 1, 3],
+      "explanation": "Plattformen können gezielte Werbung anbieten, indem sie sowohl das Online-Verhalten als auch die Interessensbereiche eines Nutzers analysieren und auswerten. Besucht man also öfters Profile mit Katzen-Content, kann es dazu kommen, dass einem demnächst Kratzbäume und Katzenspielzeuge angeboten werden. Außerdem kann es in Ausnahmen dazu führen, dass auch private Gespräche in die Auswertung miteinbezogen werden."
+    },
+    {
+      "id": 5,
+      "topic": "Gezielte Werbung",
+      "question": "Wie kannst du dich vor gezielter Werbung schützen?",
+      "options": [
+        "Private Suchmaschinen nutzen.",
+        "Mehr persönliche Daten teilen.",
+        "Werbeanpassungseinstellungen überprüfen.",
+        "Tracking-Cookies akzeptieren."
+      ],
+      "correctOptionIndexes": [0, 2],
+      "explanation": "Um zu vermeiden, dass persönliche Daten zum Anbieten von Werbung missbraucht werden, ist es empfehlenswert, private Suchmaschinen zu nutzen oder seine Werbeanpassungseinstellungen zu überprüfen. Man sollte es vermeiden, Tracking-Cookies zu akzeptieren und persönliche Daten auf unbekannten Seiten zu teilen."
+    },
+    {
+      "id": 6,
+      "topic": "Gezielte Werbung",
+      "question": "Was sind mögliche Gefühle, die durch gezielte Werbung ausgelöst werden?",
+      "options": [
+        "Gefühl der ständigen Überwachung.",
+        "Freude über relevante Angebote.",
+        "Neutralität.",
+        "Verärgerung über aufdringliche Anzeigen."
+      ],
+      "correctOptionIndexes": [0, 1, 3],
+      "explanation": "Einerseits kann auf lange Dauer ein Gefühl von ständiger Überwachung oder sogar Verärgerung aufkommen, falls auch oft Produkte angeboten werden, die einen nicht interessieren. Trotzdem kann das für manche Menschen auch nützlich sein, da einem die lange Suche nach einem passenden Angebot erspart wird."
+    },
+    {
+      "id": 7,
+      "topic": "FOMO (Fear of Missing Out)",
+      "question": "Welche Aussagen treffen auf FOMO zu?",
+      "options": [
+        "Es ist die Freude, etwas zu verpassen.",
+        "Es tritt vor allem im Zusammenhang mit sozialen Medien auf.",
+        "Es kann zu Angst und Unzufriedenheit führen.",
+        "Es motiviert zu sozialer Isolation."
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "Die schnellste Methode, um dem endlosen Scrollen in den sozialen Netzwerken ein Ende zu setzen, wäre wahrscheinlich das Deinstallieren dieser Plattformen. Doch davor kommt oft eine Angst oder die Unzufriedenheit auf, etwas Wichtiges verpassen oder an etwas nicht teilnehmen zu können."
+    },
+    {
+      "id": 8,
+      "topic": "FOMO (Fear of Missing Out)",
+      "question": "Welche Strategien können helfen, FOMO zu reduzieren?",
+      "options": [
+        "Social-Media-Pausen einlegen.",
+        "Mehr Zeit online verbringen.",
+        "Dankbarkeit üben.",
+        "Authentischen Inhalten folgen."
+      ],
+      "correctOptionIndexes": [0, 2, 3],
+      "explanation": "Um die Angst, etwas Wichtiges verpassen zu können, zu reduzieren, wäre es trotz der Unsicherheiten nützlich, eine Social-Media-Pause einzulegen. Dadurch entwickelt man eine andere Sichtweise auf sein Umfeld. Man wird lernen, reale Dinge mehr zu schätzen und Dankbarkeit dafür zu entwickeln. Man kann aber trotzdem die sozialen Netzwerke weiter nutzen, indem man sich auf authentische und bildende Inhalte konzentriert."
+    },
+    {
+      "id": 9,
+      "topic": "FOMO (Fear of Missing Out)",
+      "question": "Welche Auswirkungen kann FOMO haben?",
+      "options": [
+        "Steigerung des Selbstwertgefühls.",
+        "Sozialer Druck.",
+        "Angstzustände.",
+        "Verbesserte Konzentration."
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "Personen mit einer FOMO entwickeln oft Angstzustände und verspüren einen sozialen Druck. Dies kann mitunter auch zu einer Beeinträchtigung des Selbstbewusstseins führen. Hierbei ist es umso wichtiger, eine FOMO frühzeitig zu erkennen, um dieser entgegenwirken zu können."
+    },
+    {
+      "id": 10,
+      "topic": "Dopamin-Trigger",
+      "question": "Welche Elemente in sozialen Medien wirken als Dopamin-Trigger?",
+      "options": [
+        "Likes.",
+        "Kommentare.",
+        "Werbebanner.",
+        "Push-Benachrichtigungen."
+      ],
+      "correctOptionIndexes": [0, 1, 3],
+      "explanation": "Sowohl Likes, positive Kommentare als auch Push-Benachrichtigungen regen das Dopaminsystem im Gehirn an. Das führt dazu, dass man sich für einen kurzen Zeitpunkt glücklich und belohnt fühlt. Damit das Dopaminsystem anschließend weiter angeregt werden kann, reicht der gleiche Anteil an Reizen nicht mehr. Somit verlangt man nach mehr Kommentaren und mehr Likes."
+    },
+    {
+      "id": 11,
+      "topic": "Dopamin-Trigger",
+      "question": "Wie kannst du die Wirkung von Dopamin-Triggern reduzieren?",
+      "options": [
+        "Benachrichtigungen ausschalten.",
+        "Mehr Zeit in sozialen Medien verbringen.",
+        "Nutzung auf feste Zeiten beschränken.",
+        "Nach jedem Login reflektieren."
+      ],
+      "correctOptionIndexes": [0, 2, 3],
+      "explanation": "Um den Dopamin-Trigger zu reduzieren, ist einerseits zu empfehlen, die Benachrichtigungen dieser Plattformen abzuschalten. Das ermöglicht, dass man bei anderen Tätigkeiten nicht abgelenkt wird und nicht wieder in die 'endlos Scrollen' Schleife fällt. Auch das Einschränken der Seiten auf einen bestimmten Zeitpunkt oder das aktive Reflektieren nach der Nutzung könnten helfen, den Dopamin-Trigger in den Griff zu bekommen."
+    },
+    {
+      "id": 12,
+      "topic": "Algorithmus-Bias",
+      "question": "Welche Effekte hat der Algorithmus-Bias?",
+      "options": [
+        "Er erweitert die Meinungsvielfalt.",
+        "Er verstärkt bestehende Ansichten.",
+        "Er führt zu Filterblasen.",
+        "Er zeigt zufällige Inhalte."
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "Der Algorithmus-Bias ist dafür da, durch die Analyse und Auswertung der konsumierten Inhalte eines Nutzers, diesem in Zukunft wieder ähnliche Inhalte vorzuschlagen. Das führt zu Filterblasen und einer einseitigen Information. Vor allem politisch radikale Seiten profitieren daraus, da deren Beiträge meistens sehr polarisierend sind, mehr geteilt werden und somit mehr Nutzer in diese Filterblase fallen. Auch das ist ein fortlaufender Kreislauf, aus dem man schwer ausbrechen kann."
+    }
+  ],
+  "scoreRanges": [
+    {
+      "minScore": 0,
+      "maxScore": 2,
+      "message": "Achtung: Du lässt dich stark von sozialen Medien beeinflussen. Überdenke dein Nutzungsverhalten."
+    },
+    {
+      "minScore": 3,
+      "maxScore": 5,
+      "message": "Soziale Medien haben möglicherweise zu viel Einfluss auf dich."
+    },
+    {
+      "minScore": 6,
+      "maxScore": 8,
+      "message": "Achte darauf, wie soziale Medien dich beeinflussen."
+    },
+    {
+      "minScore": 9,
+      "maxScore": 10,
+      "message": "Du bist bewusst, aber es gibt Raum für Verbesserungen."
+    },
+    {
+      "minScore": 11,
+      "maxScore": 12,
+      "message": "Du hast soziale Medien voll unter Kontrolle! Weiter so."
+    }
+  ]
+}
