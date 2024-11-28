@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import InfoPage from "./components/InfoPage";
 import LandingPage from "./components/LandingPage";
 import NavigationBar from "./components/NavigationBar";
