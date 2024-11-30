@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fau-mafa/static/css/main.e89c5fda.css",
-    "main.js": "/fau-mafa/static/js/main.254ccfca.js",
+    "main.css": "/fau-mafa/static/css/main.a8200b79.css",
+    "main.js": "/fau-mafa/static/js/main.f90d0e72.js",
     "static/js/453.14a32f6a.chunk.js": "/fau-mafa/static/js/453.14a32f6a.chunk.js",
     "static/media/bg_landingpage.png": "/fau-mafa/static/media/bg_landingpage.08a6539c08a1f9aac1c2.png",
     "static/media/targeted_ads.png": "/fau-mafa/static/media/targeted_ads.3938f6f7e428d6a0bd8a.png",
@@ -10,12 +10,12 @@
     "static/media/endless_scrolling.png": "/fau-mafa/static/media/endless_scrolling.1b168d6b40159e4fb9ce.png",
     "static/media/dopamine_trigger.jpg": "/fau-mafa/static/media/dopamine_trigger.2587e208afd5bbf8f226.jpg",
     "index.html": "/fau-mafa/index.html",
-    "main.e89c5fda.css.map": "/fau-mafa/static/css/main.e89c5fda.css.map",
-    "main.254ccfca.js.map": "/fau-mafa/static/js/main.254ccfca.js.map",
+    "main.a8200b79.css.map": "/fau-mafa/static/css/main.a8200b79.css.map",
+    "main.f90d0e72.js.map": "/fau-mafa/static/js/main.f90d0e72.js.map",
     "453.14a32f6a.chunk.js.map": "/fau-mafa/static/js/453.14a32f6a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e89c5fda.css",
-    "static/js/main.254ccfca.js"
+    "static/css/main.a8200b79.css",
+    "static/js/main.f90d0e72.js"
   ]
 }
