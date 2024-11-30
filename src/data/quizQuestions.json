@@ -161,27 +161,27 @@
     {
       "minScore": 0,
       "maxScore": 2,
-      "message": "Achtung: Du lässt dich stark von sozialen Medien beeinflussen. Überdenke dein Nutzungsverhalten."
+      "message": "Achtung: Du es ist wahrscheinlich, dass dich soziale Medien negativ beeinflussen. Überdenke dein Nutzungsverhalten."
     },
     {
       "minScore": 3,
       "maxScore": 5,
-      "message": "Soziale Medien haben möglicherweise zu viel Einfluss auf dich."
+      "message": "Gehe vorsichtig mit sozialen Medien um."
     },
     {
       "minScore": 6,
       "maxScore": 8,
-      "message": "Achte darauf, wie soziale Medien dich beeinflussen."
+      "message": "Du weißt einiges von sozialen Medien. Achte dennoch darauf, wie soziale Medien dich beeinflussen."
     },
     {
       "minScore": 9,
       "maxScore": 10,
-      "message": "Du bist bewusst, aber es gibt Raum für Verbesserungen."
+      "message": "Du weißt viel über sozialen Medien und kannst diese effektiv nutzen."
     },
     {
       "minScore": 11,
       "maxScore": 12,
-      "message": "Du hast soziale Medien voll unter Kontrolle! Weiter so."
+      "message": "Du hast deinesoziale Medien voll unter Kontrolle! Weiter so."
     }
   ]
 }
