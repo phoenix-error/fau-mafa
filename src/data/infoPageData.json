@@ -6,7 +6,21 @@
     "solutions": [
       "Browser-Plugins nutzen: Verwende Erweiterungen wie 'News Feed Eradicator', um endlose Feeds zu blockieren.",
       "Bildschirmzeit-Benachrichtigungen aktivieren: Diese warnen dich nach einer bestimmten Nutzungsdauer.",
-      "To-Do-First-Liste erstellen: Plane deine Zeit bewusst, bevor du dein Handy benutzt."
+      "To-Do-Liste erstellen: Plane deine Zeit bewusst, bevor du dein Handy benutzt."
+    ],
+    "additionalResources": [
+      {
+        "title": "The Battle for Your Time: Exposing the Costs of Social Media | Dino Ambrosi",
+        "link": "https://www.ted.com/talks/dino_ambrosi_the_battle_for_your_time_exposing_the_hidden_costs_of_social_media?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare"
+      },
+      {
+        "title": "Sera, R., 2023. A Systematic Analysis of Infinite Scrolling in Digital Interfaces: A Good Accompanied by Bad and Ugly.",
+        "link": "https://doi.org/10.55041/ijsrem24808"
+      },
+      {
+        "title": "Li, Y., & Qiu, B., 2023. Relationship Between Doom-scrolling and Mental Health under the Influence of Recommendation Algorithms. Lecture Notes in Education Psychology and Public Media.",
+        "link": "https://doi.org/10.54254/2753-7048/15/20231048"
+      }
     ],
     "image": "endless_scrolling.png"
   },
@@ -19,6 +33,20 @@
       "Such- und Browserverlauf löschen: Tracking minimieren.",
       "Private Suchmaschinen nutzen: DuckDuckGo verwenden und Tracking-Cookies blockieren."
     ],
+    "additionalResources": [
+      {
+        "title": "Jiang, J., Zheng, Y., Shi, Z., Yuan, X., Gui, X., & Wang, C., 2020. A Practical System for Privacy-Aware Targeted Mobile Advertising Services. IEEE Transactions on Services Computing, 13, pp. 410-424.",
+        "link": "https://doi.org/10.1109/TSC.2017.2697385"
+      },
+      {
+        "title": "Strycharz, J., van Noort, G., Smit, E. and Helberger, N. (2019) “Protective behavior against personalized ads: Motivation to turn personalization off”, Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 13(2), p. Article 1.",
+        "link": "https://doi.org/10.5817/CP2019-2-1"
+      },
+      {
+        "title": "Hoanca, B., 2020. The Human Connection Drug: Should Addiction to Social Media Be Legislated Out?. IEEE Technology and Society Magazine, 39, pp. 61-68.",
+        "link": "https://doi.org/10.1109/MTS.2020.2967494"
+      }
+    ],
     "image": "targeted_ads.png"
   },
   {
@@ -29,6 +57,12 @@
       "Social-Media-Pausen einlegen: Schützt die mentale Gesundheit.",
       "Reale und positive Inhalte folgen: Accounts auswählen, die authentische Inhalte teilen.",
       "Dankbarkeit üben: Tägliche Reflexion über positive Aspekte im Leben."
+    ],
+    "additionalResources": [
+      {
+        "title": "Alutaybi, A., Al-Thani, D., Mcalaney, J., & Ali, R., 2020. Combating Fear of Missing Out (FoMO) on Social Media: The FoMO-R Method. International Journal of Environmental Research and Public Health, 17.",
+        "link": "https://doi.org/10.3390/ijerph17176128"
+      }
     ],
     "image": "fomo.jpg"
   },
@@ -41,16 +75,32 @@
       "Nutzung auf feste Zeiten beschränken: Z. B. 15 Minuten nach dem Mittagessen.",
       "Reflexion fördern: Nach jedem Login fragen, warum die App geöffnet wurde."
     ],
+    "additionalResources": [
+      {
+        "title": "How to Combat the Negative Effects of Social Media",
+        "link": "https://online.king.edu/news/how-to-combat-the-negative-effects-of-social-media"
+      }
+    ],
     "image": "dopamine_trigger.jpg"
   },
   {
     "title": "Algorithmus-Bias",
     "shortDescription": "Algorithmen verstärken bestehende Ansichten und schränken die Meinungsvielfalt ein.",
-    "detailedDescription": "Algorithmen bestimmen zunehmend unsere digitalen Erfahrungen und neigen dazu, bestehende Ansichten zu verstärken. Sie bevorzugen Inhalte, die mit unseren bisherigen Interaktionen übereinstimmen, was zu Filterblasen führen kann. Auf Facebook werden Nutzern vorwiegend Beiträge angezeigt, die mit ihren politischen Ansichten übereinstimmen; YouTube schlägt oft extremere Versionen der zuletzt angesehenen Videos vor.",
+    "detailedDescription": "Algorithmen bestimmen zunehmend unsere digitalen Erfahrungen und neigen dazu, bestehende Ansichten zu verstärken. Sie bevorzugen Inhalte, die mit unseren bisherigen Interaktionen übereinstimmen, was zu Filterblasen führen kann. Auf Facebook werden Nutzern vorwiegend Beiträge angezeigt, die mit ihren politischen Ansichten übereinstimmen; YouTube schlägt oft ähnliche Videos vor. Dies kann die Meinungsvielfalt einschränken und die Polarisierung erhöhen.",
     "solutions": [
-      "Plattformen wie Reddit nutzen: Verschiedene Communities entdecken.",
-      "Aktiv nach widersprechenden Inhalten suchen: Perspektiven erweitern.",
-      "Plattformwechsel durchführen: Um eine größere Vielfalt an Informationen zu erhalten."
+      "Bewusst verschiedene Quellen konsumieren: Sich aktiv aus der Filterblase befreien.",
+      "Algorithmen kritisch hinterfragen: Eigene Mediennutzung reflektieren.",
+      "Plattformen mit transparenten Algorithmen unterstützen."
+    ],
+    "additionalResources": [
+      {
+        "title": "Areeb, Q., Nadeem, M., Sohail, S., Imam, R., Doctor, F., Himeur, Y., Hussain, A., & Amira, A., 2023. Filter bubbles in recommender systems: Fact or fallacy—A systematic review. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 13.",
+        "link": "https://doi.org/10.1002/widm.1512"
+      },
+      {
+        "title": "Bozdag, E. Bias in algorithmic filtering and personalization. Ethics Inf Technol 15, 209–227 (2013).",
+        "link": "https://doi.org/10.1007/s10676-013-9321-6"
+      }
     ],
     "image": "algorithm_bias.jpg"
   }

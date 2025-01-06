@@ -11,7 +11,21 @@
         "Deine volle Aufmerksamkeit wird von dem gezeigten Inhalt vollkommen beansprucht."
       ],
       "correctOptionIndexes": [1, 3],
-      "explanation": "Endloses Scrollen verlängert die Verweildauer auf den jeweiligen Plattformen und zieht die volle Aufmerksamkeit des Nutzers auf sich. Verschiedene Techniken werden gezielt angewendet, um den Nutzer so lange wie möglich auf den Seiten zu behalten."
+      "explanation": "Endloses Scrollen verlängert die Verweildauer auf den jeweiligen Plattformen und zieht die volle Aufmerksamkeit des Nutzers auf sich. Verschiedene Techniken werden gezielt angewendet, um den Nutzer so lange wie möglich auf den Seiten zu behalten.",
+      "additionalResources": [
+        {
+          "title": "The Battle for Your Time: Exposing the Costs of Social Media | Dino Ambrosi",
+          "link": "https://www.ted.com/talks/dino_ambrosi_the_battle_for_your_time_exposing_the_hidden_costs_of_social_media?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare"
+        },
+        {
+          "title": "Sera, R., 2023. A Systematic Analysis of Infinite Scrolling in Digital Interfaces: A Good Accompanied by Bad and Ugly.",
+          "link": "https://doi.org/10.55041/ijsrem24808"
+        },
+        {
+          "title": "Li, Y., & Qiu, B., 2023. Relationship Between Doom-scrolling and Mental Health under the Influence of Recommendation Algorithms. Lecture Notes in Education Psychology and Public Media.",
+          "link": "https://doi.org/10.54254/2753-7048/15/20231048"
+        }
+      ]
     },
     {
       "id": 2,
@@ -24,7 +38,17 @@
         "Genaue Uhrzeiten festlegen."
       ],
       "correctOptionIndexes": [0, 3],
-      "explanation": "Es gibt viele verschiedene Apps und Plugins, die dabei helfen können, das endlose Scrollen zu minimieren. Durch das Setzen eines Zeitlimits oder Benachrichtigungen zu einer bestimmten Uhrzeit wird man regelmäßig daran erinnert, diese Plattformen zu schließen und kann seine Zeit wieder nützlichen Sachen widmen."
+      "explanation": "Es gibt viele verschiedene Apps und Plugins, die dabei helfen können, das endlose Scrollen zu minimieren. Durch das Setzen eines Zeitlimits oder Benachrichtigungen zu einer bestimmten Uhrzeit wird man regelmäßig daran erinnert, diese Plattformen zu schließen und kann seine Zeit wieder nützlichen Sachen widmen.",
+      "additionalResources": [
+        {
+          "title": "Look Up! Reduce Your Screen Time and Reclaim Your Life | Melissa Newman",
+          "link": "https://www.ted.com/talks/melissa_newman_look_up_reduce_your_screen_time_and_reclaim_your_life?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare"
+        },
+        {
+          "title": "Hoanca, B., 2020. The Human Connection Drug: Should Addiction to Social Media Be Legislated Out?. IEEE Technology and Society Magazine, 39, pp. 61-68.",
+          "link": "https://doi.org/10.1109/MTS.2020.2967494"
+        }
+      ]
     },
     {
       "id": 3,
@@ -37,7 +61,17 @@
         "Der Nutzer kann eine Pause einlegen."
       ],
       "correctOptionIndexes": [0, 2],
-      "explanation": "Das 'endlose Scrollen' führt dazu, dass tausende von Nutzern mehrere Stunden auf diesen Plattformen verbringen. Dadurch kommt es zu mehr Werbeeinnahmen, die Nutzerdaten der User können detailliert gesammelt werden, und die Plattform gewinnt an Beliebtheit. Außerdem können durch das regelmäßige Nutzen Algorithmen verfeinert werden. Das alles bildet einen Kreislauf und steigert den Erfolg einer Plattform."
+      "explanation": "Das 'endlose Scrollen' führt dazu, dass tausende von Nutzern mehrere Stunden auf diesen Plattformen verbringen. Dadurch kommt es zu mehr Werbeeinnahmen, die Nutzerdaten der User können detailliert gesammelt werden, und die Plattform gewinnt an Beliebtheit. Außerdem können durch das regelmäßige Nutzen Algorithmen verfeinert werden. Das alles bildet einen Kreislauf und steigert den Erfolg einer Plattform.",
+      "additionalResources": [
+        {
+          "title": "The Battle for Your Time: Exposing the Costs of Social Media | Dino Ambrosi",
+          "link": "https://www.ted.com/talks/dino_ambrosi_the_battle_for_your_time_exposing_the_hidden_costs_of_social_media?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare"
+        },
+        {
+          "title": "",
+          "link": ""
+        }
+      ]
     },
     {
       "id": 4,
@@ -45,11 +79,11 @@
       "question": "Welche Daten werden häufig für gezielte Werbung verwendet?",
       "options": [
         "Dein Online-Verhalten.",
-        "Deine persönlichen Gespräche.",
+        "Deine Hausaufgaben.",
         "Deine private Fotobibliothek.",
         "Deine Interessen."
       ],
-      "correctOptionIndexes": [0, 1, 3],
+      "correctOptionIndexes": [0, 3],
       "explanation": "Plattformen können gezielte Werbung anbieten, indem sie sowohl das Online-Verhalten als auch die Interessensbereiche eines Nutzers analysieren und auswerten. Besucht man also öfters Profile mit Katzen-Content, kann es dazu kommen, dass einem demnächst Kratzbäume und Katzenspielzeuge angeboten werden. Außerdem kann es in Ausnahmen dazu führen, dass auch private Gespräche in die Auswertung miteinbezogen werden."
     },
     {
@@ -63,7 +97,17 @@
         "Tracking-Cookies akzeptieren."
       ],
       "correctOptionIndexes": [0, 2],
-      "explanation": "Um zu vermeiden, dass persönliche Daten zum Anbieten von Werbung missbraucht werden, ist es empfehlenswert, private Suchmaschinen zu nutzen oder seine Werbeanpassungseinstellungen zu überprüfen. Man sollte es vermeiden, Tracking-Cookies zu akzeptieren und persönliche Daten auf unbekannten Seiten zu teilen."
+      "explanation": "Um zu vermeiden, dass persönliche Daten zum Anbieten von Werbung missbraucht werden, ist es empfehlenswert, private Suchmaschinen zu nutzen oder seine Werbeanpassungseinstellungen zu überprüfen. Man sollte es vermeiden, Tracking-Cookies zu akzeptieren und persönliche Daten auf unbekannten Seiten zu teilen.",
+      "additionalResources": [
+        {
+          "title": "Jiang, J., Zheng, Y., Shi, Z., Yuan, X., Gui, X., & Wang, C., 2020. A Practical System for Privacy-Aware Targeted Mobile Advertising Services. IEEE Transactions on Services Computing, 13, pp. 410-424.",
+          "link": "https://doi.org/10.1109/TSC.2017.2697385"
+        },
+        {
+          "title": "Strycharz, J., van Noort, G., Smit, E. and Helberger, N. (2019) “Protective behavior against personalized ads: Motivation to turn personalization off”, Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 13(2), p. Article 1.",
+          "link": "https://doi.org/10.5817/CP2019-2-1"
+        }
+      ]
     },
     {
       "id": 6,
@@ -102,7 +146,13 @@
         "Authentischen Inhalten folgen."
       ],
       "correctOptionIndexes": [0, 2, 3],
-      "explanation": "Um die Angst, etwas Wichtiges verpassen zu können, zu reduzieren, wäre es trotz der Unsicherheiten nützlich, eine Social-Media-Pause einzulegen. Dadurch entwickelt man eine andere Sichtweise auf sein Umfeld. Man wird lernen, reale Dinge mehr zu schätzen und Dankbarkeit dafür zu entwickeln. Man kann aber trotzdem die sozialen Netzwerke weiter nutzen, indem man sich auf authentische und bildende Inhalte konzentriert."
+      "explanation": "Um die Angst, etwas Wichtiges verpassen zu können, zu reduzieren, wäre es trotz der Unsicherheiten nützlich, eine Social-Media-Pause einzulegen. Dadurch entwickelt man eine andere Sichtweise auf sein Umfeld. Man wird lernen, reale Dinge mehr zu schätzen und Dankbarkeit dafür zu entwickeln. Man kann aber trotzdem die sozialen Netzwerke weiter nutzen, indem man sich auf authentische und bildende Inhalte konzentriert.",
+      "additionalResources": [
+        {
+          "title": "Alutaybi, A., Al-Thani, D., Mcalaney, J., & Ali, R., 2020. Combating Fear of Missing Out (FoMO) on Social Media: The FoMO-R Method. International Journal of Environmental Research and Public Health, 17.",
+          "link": "https://doi.org/10.3390/ijerph17176128"
+        }
+      ]
     },
     {
       "id": 9,
@@ -141,7 +191,13 @@
         "Nach jedem Login reflektieren."
       ],
       "correctOptionIndexes": [0, 2, 3],
-      "explanation": "Um den Dopamin-Trigger zu reduzieren, ist einerseits zu empfehlen, die Benachrichtigungen dieser Plattformen abzuschalten. Das ermöglicht, dass man bei anderen Tätigkeiten nicht abgelenkt wird und nicht wieder in die 'endlos Scrollen' Schleife fällt. Auch das Einschränken der Seiten auf einen bestimmten Zeitpunkt oder das aktive Reflektieren nach der Nutzung könnten helfen, den Dopamin-Trigger in den Griff zu bekommen."
+      "explanation": "Um den Dopamin-Trigger zu reduzieren, ist einerseits zu empfehlen, die Benachrichtigungen dieser Plattformen abzuschalten. Das ermöglicht, dass man bei anderen Tätigkeiten nicht abgelenkt wird und nicht wieder in die 'endlos Scrollen' Schleife fällt. Auch das Einschränken der Seiten auf einen bestimmten Zeitpunkt oder das aktive Reflektieren nach der Nutzung könnten helfen, den Dopamin-Trigger in den Griff zu bekommen.",
+      "additionalResources": [
+        {
+          "title": "How to Combat the Negative Effects of Social Media",
+          "link": "https://online.king.edu/news/how-to-combat-the-negative-effects-of-social-media"
+        }
+      ]
     },
     {
       "id": 12,
@@ -154,7 +210,17 @@
         "Er zeigt zufällige Inhalte."
       ],
       "correctOptionIndexes": [1, 2],
-      "explanation": "Der Algorithmus-Bias ist dafür da, durch die Analyse und Auswertung der konsumierten Inhalte eines Nutzers, diesem in Zukunft wieder ähnliche Inhalte vorzuschlagen. Das führt zu Filterblasen und einer einseitigen Information. Vor allem politisch radikale Seiten profitieren daraus, da deren Beiträge meistens sehr polarisierend sind, mehr geteilt werden und somit mehr Nutzer in diese Filterblase fallen. Auch das ist ein fortlaufender Kreislauf, aus dem man schwer ausbrechen kann."
+      "explanation": "Der Algorithmus-Bias ist dafür da, durch die Analyse und Auswertung der konsumierten Inhalte eines Nutzers, diesem in Zukunft wieder ähnliche Inhalte vorzuschlagen. Das führt zu Filterblasen und einer einseitigen Information. Vor allem politisch radikale Seiten profitieren daraus, da deren Beiträge meistens sehr polarisierend sind, mehr geteilt werden und somit mehr Nutzer in diese Filterblase fallen. Auch das ist ein fortlaufender Kreislauf, aus dem man schwer ausbrechen kann.",
+      "additionalResources": [
+        {
+          "title": "Areeb, Q., Nadeem, M., Sohail, S., Imam, R., Doctor, F., Himeur, Y., Hussain, A., & Amira, A., 2023. Filter bubbles in recommender systems: Fact or fallacy—A systematic review. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 13.",
+          "link": "https://doi.org/10.1002/widm.1512"
+        },
+        {
+          "title": "Bozdag, E. Bias in algorithmic filtering and personalization. Ethics Inf Technol 15, 209–227 (2013).",
+          "link": "https://doi.org/10.1007/s10676-013-9321-6"
+        }
+      ]
     }
   ],
   "scoreRanges": [
