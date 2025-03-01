@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import useQuizStore from "../store/quizStore";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Checkbox } from "./ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 
 const QuizPage: React.FC = () => {
   const navigate = useNavigate();
@@ -28,21 +32,25 @@ const QuizPage: React.FC = () => {
       setFeedback("Bitte wählen Sie mindestens eine Antwort aus.");
       setTimeout(() => {
         setFeedback(null);
-      }, 2000);
+      }, 3000);
       return;
     }
-    checkAnswer(setFeedback);
-    setButtonText("Next");
-    setAreButtonsDisabled(true);
-    setAnsweredState(true);
+
+    if (!answeredState) {
+      checkAnswer(setFeedback);
+      setButtonText("Weiter");
+      setAnsweredState(true);
+    } else {
+      handleNext();
+    }
   };
 
   const handleNext = () => {
     nextQuestion();
     setButtonText("Überprüfen");
-    setFeedback(null);
-    setAreButtonsDisabled(false);
     setAnsweredState(false);
+    setAreButtonsDisabled(false);
+    setFeedback(null);
   };
 
   const handleBackToHome = () => {
@@ -50,197 +58,174 @@ const QuizPage: React.FC = () => {
     navigate("/");
   };
 
-  // Helper function to determine button color after answering
   const getButtonColor = (optionIndex: number) => {
-    const correctAnswers = questions[currentQuestionIndex].correctOptionIndexes;
+    if (!answeredState) return "";
 
-    if (!answeredState) {
-      // Before answering, selected options are blue
-      return selectedAnswers.has(optionIndex)
-        ? "bg-blue-600 text-white"
-        : "bg-white text-black hover:bg-blue-100";
-    } else {
-      // After answering
-      const isCorrect = correctAnswers.includes(optionIndex);
-      const isSelected = selectedAnswers.has(optionIndex);
+    const isSelected = selectedAnswers.has(optionIndex);
+    const currentQuestion = questions[currentQuestionIndex];
+    const isCorrect = currentQuestion.correctOptionIndexes.includes(optionIndex);
 
-      if (isCorrect) {
-        // Correct answer - show in green
-        return "bg-green-600 text-white";
-      } else if (isSelected) {
-        // Incorrect answer selected by user - show in red
-        return "bg-red-600 text-white";
-      } else {
-        // Unselected and incorrect - show as default
-        return "bg-white text-black";
-      }
-    }
+    if (isSelected && isCorrect) return "bg-green-100 border-green-500";
+    if (isSelected && !isCorrect) return "bg-red-100 border-red-500";
+    if (!isSelected && isCorrect) return "bg-green-100 border-green-500";
+    return "";
   };
 
+  const currentQuestion = questions[currentQuestionIndex];
+  // Determine if the question is multiple choice (more than one correct answer)
+  const isMultipleChoice = currentQuestion.correctOptionIndexes.length > 1;
+
   return (
-    <div className="w-full bg-gray-100">
-      <div className="container mx-auto flex justify-center py-8 px-8 pb-16">
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full mb-8">
-          {/* Progress Bar */}
-          {!showResults && (
-            <div className="mb-4">
-              <p className="text-center mb-1">
-                Frage {currentQuestionIndex + 1} von {questions.length}
-              </p>
-              <div className="w-full bg-gray-200 rounded-full h-4">
-                <div
-                  className="bg-blue-600 h-4 rounded-full"
-                  style={{
-                    width: `${
-                      ((currentQuestionIndex + 1) / questions.length) * 100
-                    }%`,
-                  }}
-                ></div>
-              </div>
-            </div>
-          )}
-          {!showResults ? (
-            <motion.div
-              animate={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -20 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-xl font-semibold mb-4">
-                {questions[currentQuestionIndex].question}
-              </h2>
-              <p className="text-sm text-gray-500 mb-4">
-                (Mehrfachauswahl möglich)
-              </p>
-              <div className="space-y-2">
-                {questions[currentQuestionIndex].options.map(
-                  (option, oIndex) => (
-                    <motion.button
-                      key={oIndex}
-                      className={`w-full text-left p-4 border-2 rounded-lg cursor-pointer transition-colors duration-200 ${
-                        getButtonColor(oIndex)
-                      }`}
-                      onClick={() => !answeredState && toggleAnswer(oIndex)}
-                      whileHover={{ scale: answeredState ? 1 : 1.05 }}
-                      whileTap={{ scale: answeredState ? 1 : 0.95 }}
-                      disabled={areButtonsDisabled}
+    <div className="container mx-auto p-4 max-w-4xl">
+      {!showResults ? (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl sm:text-2xl">
+              Frage {currentQuestionIndex + 1} von {questions.length}
+            </CardTitle>
+            <CardDescription>
+              {isMultipleChoice
+                ? "Wählen Sie alle zutreffenden Antworten aus."
+                : "Wählen Sie eine Antwort aus."}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <h2 className="text-lg sm:text-xl font-medium mb-4">
+              {currentQuestion.question}
+            </h2>
+
+            {isMultipleChoice ? (
+              <div className="space-y-3">
+                {currentQuestion.options.map((option, optionIndex) => (
+                  <div
+                    key={optionIndex}
+                    className={`flex items-center space-x-3 p-3 rounded-md border ${getButtonColor(optionIndex)}`}
+                  >
+                    <Checkbox
+                      id={`option-${optionIndex}`}
+                      checked={selectedAnswers.has(optionIndex)}
+                      onCheckedChange={() => !answeredState && toggleAnswer(optionIndex)}
+                      disabled={answeredState}
+                    />
+                    <label
+                      htmlFor={`option-${optionIndex}`}
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                     >
                       {option}
-                    </motion.button>
-                  )
-                )}
+                    </label>
+                  </div>
+                ))}
               </div>
-              {feedback && (
-                <motion.div
-                  className={`mt-4 p-4 rounded text-center ${
-                    feedback === "Richtig!"
-                      ? "bg-green-200 text-green-800"
-                      : feedback === "Falsch!"
-                      ? "bg-red-200 text-red-800"
-                      : feedback === "Teilweise richtig!"
-                      ? "bg-yellow-200 text-yellow-800"
-                      : "bg-yellow-200 text-yellow-800"
-                  }`}
-                  animate={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {feedback}
-                  {feedback !==
-                    "Bitte wählen Sie mindestens eine Antwort aus." && (
-                    <>
-                      <p className="mt-2">
-                        {questions[currentQuestionIndex].explanation}
-                      </p>
-                      <p className="mt-2">
-                        {questions[currentQuestionIndex]
-                          .additionalResources && (
-                          <div className="mt-4">
-                            <h3 className="text-lg font-semibold mb-2">
-                              Zusätzliche Ressourcen:
-                            </h3>
-                            <ul className="space-y-2">
-                              {questions[
-                                currentQuestionIndex
-                              ].additionalResources!.map(
-                                (
-                                  resource: { title: string; link: string },
-                                  index: number
-                                ) => (
-                                  <li key={index} className="flex items-center">
-                                    <a
-                                      href={resource.link}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-blue-600 hover:underline"
-                                    >
-                                      {resource.title}
-                                    </a>
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          </div>
-                        )}
-                      </p>
-                    </>
-                  )}
-                </motion.div>
-              )}
-              <motion.button
-                onClick={
-                  buttonText === "Überprüfen" ? handleSubmit : handleNext
-                }
-                className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full w-full hover:bg-blue-700"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            ) : (
+              <RadioGroup
+                value={selectedAnswers.size > 0 ? Array.from(selectedAnswers)[0].toString() : undefined}
+                onValueChange={(value) => !answeredState && toggleAnswer(parseInt(value))}
+                className="space-y-3"
+                disabled={answeredState}
               >
-                {buttonText}
-              </motion.button>
-            </motion.div>
-          ) : (
-            <div>
-              <h2 className="text-xl font-semibold mb-4 text-center">
-                Ihr Ergebnis: {score % 1 === 0 ? score : score.toFixed(1)}/ 12
-              </h2>
-              {scoreRanges.map(
-                (
-                  range: {
-                    minScore: number;
-                    maxScore: number;
-                    message: string;
-                  },
-                  index: number
-                ) => {
-                  const isLowerRange = index < 2;
-                  const isMiddleRange = index === 2;
-                  const bgColor = isLowerRange
-                    ? "bg-red-200 text-red-800"
-                    : isMiddleRange
-                    ? "bg-yellow-200 text-yellow-800"
-                    : "bg-green-200 text-green-800";
-
-                  return score >= range.minScore && score <= range.maxScore ? (
-                    <p
-                      key={index}
-                      className={`text-lg text-center p-4 rounded ${bgColor}`}
+                {currentQuestion.options.map((option, optionIndex) => (
+                  <div
+                    key={optionIndex}
+                    className={`flex items-center space-x-3 p-3 rounded-md border ${getButtonColor(optionIndex)}`}
+                  >
+                    <RadioGroupItem
+                      value={optionIndex.toString()}
+                      id={`option-${optionIndex}`}
+                      disabled={answeredState}
+                    />
+                    <label
+                      htmlFor={`option-${optionIndex}`}
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                     >
-                      {range.message}
-                    </p>
-                  ) : null;
-                }
-              )}
-              <button
-                onClick={handleBackToHome}
-                className="mt-4 bg-gray-600 text-white px-6 py-2 rounded-lg w-full hover:bg-gray-700"
-              >
+                      {option}
+                    </label>
+                  </div>
+                ))}
+              </RadioGroup>
+            )}
+
+            {feedback && (
+              <div className={`mt-4 p-3 rounded-md font-medium ${
+                feedback === "Richtig!"
+                  ? "bg-green-100 text-green-700"
+                  : feedback === "Teilweise richtig!"
+                    ? "bg-yellow-100 text-yellow-700"
+                    : "bg-red-100 text-red-700"
+              }`}>
+                {feedback}
+              </div>
+            )}
+
+            {answeredState && (
+              <div className="mt-4 p-4 bg-blue-50 rounded-md">
+                <h3 className="font-medium text-blue-800 mb-2">Erklärung:</h3>
+                <p>{currentQuestion.explanation}</p>
+              </div>
+            )}
+          </CardContent>
+          <CardFooter className="flex justify-between">
+            <Button
+              variant="outline"
+              onClick={handleBackToHome}
+              className="mr-2"
+            >
+              Abbrechen
+            </Button>
+            <Button onClick={handleSubmit}>
+              {buttonText}
+            </Button>
+          </CardFooter>
+        </Card>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl text-center">
+                Quiz abgeschlossen!
+              </CardTitle>
+              <CardDescription className="text-center">
+                Sie haben {score} von {questions.length} Fragen richtig beantwortet.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-center mb-6">
+                <div className="text-4xl font-bold mb-2">
+                  {Math.round((score / questions.length) * 100)}%
+                </div>
+                <p className="text-lg">
+                  {scoreRanges.find(
+                    (range) =>
+                      score >= range.minScore && score <= range.maxScore
+                  )?.message || "Danke für Ihre Teilnahme!"}
+                </p>
+              </div>
+
+              <div className="bg-blue-50 p-4 rounded-md mb-6">
+                <h3 className="font-medium text-blue-800 mb-2">
+                  Was haben Sie gelernt?
+                </h3>
+                <p>
+                  Dieses Quiz sollte Ihnen helfen, die verschiedenen Manipulationstechniken
+                  in sozialen Medien zu erkennen. Je mehr Sie über diese Techniken wissen,
+                  desto besser können Sie sich davor schützen.
+                </p>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-center">
+              <Button onClick={handleBackToHome} className="mr-2">
                 Zurück zur Startseite
-              </button>
-            </div>
-          )}
-        </div>
-      </div>
+              </Button>
+              <Button variant="outline" onClick={resetQuiz}>
+                Quiz neu starten
+              </Button>
+            </CardFooter>
+          </Card>
+        </motion.div>
+      )}
     </div>
   );
 };

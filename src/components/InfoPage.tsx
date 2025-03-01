@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import infoPageData from "../data/infoPageData.json";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { X } from "lucide-react";
 
 interface Technique {
   title: string;
@@ -26,159 +30,127 @@ const InfoPage: React.FC = () => {
     setOverlayContent(null);
   };
 
+  // Ensure infoPageData is treated as an array of Technique objects
+  const techniques = Array.isArray(infoPageData) ? infoPageData : [];
+
   return (
-    <div className="w-full bg-gray-100">
-      <div className="container mx-auto py-8 px-4">
-        {overlayContent && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start z-50 p-4 overflow-y-auto"
-            onClick={closeOverlay}
-          >
-            <div
-              className="relative bg-white rounded-lg shadow-lg w-full max-w-2xl my-auto md:my-8 min-h-[calc(100vh-2rem)] md:min-h-0 md:max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="sticky top-0 bg-white z-10 flex justify-between items-center p-4 border-b">
-                <h3 className="text-2xl font-bold">{overlayContent.title}</h3>
-                <button
-                  className="text-black text-3xl hover:text-gray-700"
-                  onClick={closeOverlay}
-                >
-                  &times;
-                </button>
+    <div className="w-full bg-background p-4 sm:p-6 md:p-8">
+      <div className="max-w-5xl mx-auto px-0 sm:px-4 md:px-6">
+        <div className="text-center mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+            Manipulationstechniken in sozialen Medien
+          </h1>
+          <p className="text-muted-foreground">
+            Erfahren Sie mehr über die verschiedenen Techniken, die in sozialen Medien eingesetzt werden
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {techniques.map((technique, index) => (
+            <Card key={index} className="overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={require(`../assets/images/${technique.image}`)}
+                  alt={technique.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="p-4 md:p-8 pb-16 md:pb-8">
+              <CardHeader className="p-4">
+                <CardTitle className="text-xl">{technique.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <p className="text-sm text-muted-foreground mb-4">
+                  {technique.shortDescription}
+                </p>
+                <Button
+                  onClick={() => openOverlay(technique)}
+                  variant="secondary"
+                  className="w-full"
+                >
+                  Mehr erfahren
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {overlayContent && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+          onClick={closeOverlay}
+        >
+          <Card
+            className="max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <CardHeader className="relative">
+              <Button
+                onClick={closeOverlay}
+                variant="ghost"
+                size="icon"
+                className="absolute right-4 top-4"
+              >
+                <X className="h-4 w-4" />
+              </Button>
+              <CardTitle>{overlayContent.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="mb-6 rounded-md overflow-hidden">
                 <img
                   src={require(`../assets/images/${overlayContent.image}`)}
                   alt={overlayContent.title}
-                  className="w-full h-48 object-cover rounded-t-lg mb-4"
+                  className="w-full max-h-[300px] object-contain mx-auto"
                 />
-                <p className="text-gray-700 mb-4">
-                  {overlayContent.detailedDescription}
-                </p>
-                <ul className="list-disc pl-5">
-                  {overlayContent.solutions.map((solution, i) => (
-                    <li key={i} className="text-green-700 mb-2">
-                      {solution}
-                    </li>
-                  ))}
-                </ul>
-                {overlayContent.additionalResources && (
-                  <div className="mt-4">
-                    <h3 className="text-lg font-semibold mb-2">
-                      Zusätzliche Ressourcen:
-                    </h3>
-                    <ul className="space-y-2">
-                      {overlayContent.additionalResources.map(
-                        (resource, index) => (
-                          <li key={index} className="flex items-center">
-                            <a
-                              href={resource.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:underline"
-                            >
-                              {resource.title}
-                            </a>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
               </div>
-            </div>
-          </div>
-        )}
-        <div className="max-w-6xl w-full px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {infoPageData.slice(0, 3).map((technique, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-lg shadow-md mb-4 p-6 cursor-pointer transform transition-transform duration-300 ${
-                  expanded === index ? "scale-105" : ""
-                }`}
-                onClick={() => {
-                  if (expanded === index) {
-                    toggleExpand(index);
-                  } else {
-                    openOverlay(technique);
-                  }
-                }}
-              >
-                <img
-                  src={require(`../assets/images/${technique.image}`)}
-                  alt={technique.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
-                <h3 className="text-xl font-semibold mb-2 mt-4">
-                  {technique.title}
-                </h3>
-                <p className="text-gray-700 mb-2">
-                  {technique.shortDescription}
-                </p>
-                {expanded === index && (
-                  <div className="mt-4">
-                    <p className="text-gray-700 mb-4">
-                      {technique.detailedDescription}
-                    </p>
-                    <ul className="list-disc pl-5">
-                      {technique.solutions.map((solution, i) => (
-                        <li key={i} className="text-green-700 mb-2">
-                          {solution}
+
+              <div className="space-y-6">
+                {/* Description Section */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-primary">Beschreibung</h3>
+                  <div className="prose prose-sm max-w-none">
+                    <p>{overlayContent.detailedDescription}</p>
+                  </div>
+                </div>
+
+                {/* Solutions Section */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-primary">Lösungen</h3>
+                  <ul className="list-disc pl-5 space-y-2">
+                    {overlayContent.solutions.map((solution, idx) => (
+                      <li key={idx}>{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Resources Section - Only shown if resources exist */}
+                {overlayContent.additionalResources && overlayContent.additionalResources.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2 text-primary">Ressourcen</h3>
+                    <ul className="list-disc pl-5 space-y-2">
+                      {overlayContent.additionalResources.map((resource, idx) => (
+                        <li key={idx}>
+                          <a
+                            href={resource.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {resource.title}
+                          </a>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
               </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            {infoPageData.slice(3).map((technique, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-lg shadow-md mb-4 p-6 cursor-pointer transform transition-transform duration-300 ${
-                  expanded === index + 3 ? "scale-105" : ""
-                }`}
-                onClick={() => {
-                  if (expanded === index + 3) {
-                    toggleExpand(index + 3);
-                  } else {
-                    openOverlay(technique);
-                  }
-                }}
-              >
-                <img
-                  src={require(`../assets/images/${technique.image}`)}
-                  alt={technique.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
-                <h3 className="text-xl font-semibold mb-2 mt-4">
-                  {technique.title}
-                </h3>
-                <p className="text-gray-700 mb-2">
-                  {technique.shortDescription}
-                </p>
-                {expanded === index + 3 && (
-                  <div className="mt-4">
-                    <p className="text-gray-700 mb-4">
-                      {technique.detailedDescription}
-                    </p>
-                    <ul className="list-disc pl-5">
-                      {technique.solutions.map((solution, i) => (
-                        <li key={i} className="text-green-700 mb-2">
-                          {solution}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+            </CardContent>
+            <CardFooter>
+              <Button onClick={closeOverlay} className="w-full">Schließen</Button>
+            </CardFooter>
+          </Card>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -7,7 +7,7 @@ import QuizPage from "./components/QuizPage";
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="min-h-screen bg-background">
       <Router>
         <NavigationBar />
         <Routes>
