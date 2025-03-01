@@ -21,6 +21,7 @@ const QuizPage: React.FC = () => {
   const [feedback, setFeedback] = useState<string | null>(null);
   const [buttonText, setButtonText] = useState("Überprüfen");
   const [areButtonsDisabled, setAreButtonsDisabled] = useState(false);
+  const [answeredState, setAnsweredState] = useState(false);
 
   const handleSubmit = () => {
     if (selectedAnswers.size === 0) {
@@ -33,6 +34,7 @@ const QuizPage: React.FC = () => {
     checkAnswer(setFeedback);
     setButtonText("Next");
     setAreButtonsDisabled(true);
+    setAnsweredState(true);
   };
 
   const handleNext = () => {
@@ -40,11 +42,39 @@ const QuizPage: React.FC = () => {
     setButtonText("Überprüfen");
     setFeedback(null);
     setAreButtonsDisabled(false);
+    setAnsweredState(false);
   };
 
   const handleBackToHome = () => {
     resetQuiz();
     navigate("/");
+  };
+
+  // Helper function to determine button color after answering
+  const getButtonColor = (optionIndex: number) => {
+    const correctAnswers = questions[currentQuestionIndex].correctOptionIndexes;
+
+    if (!answeredState) {
+      // Before answering, selected options are blue
+      return selectedAnswers.has(optionIndex)
+        ? "bg-blue-600 text-white"
+        : "bg-white text-black hover:bg-blue-100";
+    } else {
+      // After answering
+      const isCorrect = correctAnswers.includes(optionIndex);
+      const isSelected = selectedAnswers.has(optionIndex);
+
+      if (isCorrect) {
+        // Correct answer - show in green
+        return "bg-green-600 text-white";
+      } else if (isSelected) {
+        // Incorrect answer selected by user - show in red
+        return "bg-red-600 text-white";
+      } else {
+        // Unselected and incorrect - show as default
+        return "bg-white text-black";
+      }
+    }
   };
 
   return (
@@ -88,13 +118,11 @@ const QuizPage: React.FC = () => {
                     <motion.button
                       key={oIndex}
                       className={`w-full text-left p-4 border-2 rounded-lg cursor-pointer transition-colors duration-200 ${
-                        selectedAnswers.has(oIndex)
-                          ? "bg-blue-600 text-white"
-                          : "bg-white text-black hover:bg-blue-100"
+                        getButtonColor(oIndex)
                       }`}
-                      onClick={() => toggleAnswer(oIndex)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      onClick={() => !answeredState && toggleAnswer(oIndex)}
+                      whileHover={{ scale: answeredState ? 1 : 1.05 }}
+                      whileTap={{ scale: answeredState ? 1 : 0.95 }}
                       disabled={areButtonsDisabled}
                     >
                       {option}
@@ -109,6 +137,8 @@ const QuizPage: React.FC = () => {
                       ? "bg-green-200 text-green-800"
                       : feedback === "Falsch!"
                       ? "bg-red-200 text-red-800"
+                      : feedback === "Teilweise richtig!"
+                      ? "bg-yellow-200 text-yellow-800"
                       : "bg-yellow-200 text-yellow-800"
                   }`}
                   animate={{ opacity: 1 }}
@@ -172,7 +202,7 @@ const QuizPage: React.FC = () => {
           ) : (
             <div>
               <h2 className="text-xl font-semibold mb-4 text-center">
-                Ihr Ergebnis: {score}/ 12
+                Ihr Ergebnis: {score % 1 === 0 ? score : score.toFixed(1)}/ 12
               </h2>
               {scoreRanges.map(
                 (

@@ -47,13 +47,27 @@ const useQuizStore = create<QuizState>((set) => ({
       const correctAnswers =
         state.questions[state.currentQuestionIndex].correctOptionIndexes;
       const userAnswers = Array.from(state.selectedAnswers);
+
+      // Fully correct: All answers are correct and user selected all correct answers
       if (
         correctAnswers.length === userAnswers.length &&
         correctAnswers.every((ans) => userAnswers.includes(ans))
       ) {
         setFeedback("Richtig!");
         return { score: state.score + 1 };
-      } else {
+      }
+      // Partially correct: User selected some correct answers but not all, or selected some incorrect ones
+      else if (
+        userAnswers.length > 0 &&
+        correctAnswers.some((ans) => userAnswers.includes(ans)) &&
+        (userAnswers.some((ans) => !correctAnswers.includes(ans)) ||
+         correctAnswers.some((ans) => !userAnswers.includes(ans)))
+      ) {
+        setFeedback("Teilweise richtig!");
+        return { score: state.score + 0.5 };
+      }
+      // Completely wrong
+      else {
         setFeedback("Falsch!");
       }
       return {};
